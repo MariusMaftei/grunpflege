@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Transform Your Outdoor Space",
+    "subtitle": "Professional garden and landscaping services by Cristian Bogdan Ciobanu",
+    "cta": "Schedule a Consultation"
+  },
+  "transformation": {
+    "title": "Our Transformations",
+    "description": "Drag the sliders to see the before and after results of our professional landscaping.",
+    "sliders": {
+      "roundabout": {
+        "title": "Roundabout Project",
+        "before": "During Work",
+        "after": "Completed Project"
+      },
+      "lawn": {
+        "title": "Lawn Maintenance",
+        "before": "During Service",
+        "after": "Completed Service"
+      },
+      "garden": {
+        "title": "Garden Renovation",
+        "before": "Before",
+        "after": "After"
+      }
+    },
+    "caption": "Our professional landscaping services transform ordinary outdoor spaces into beautiful, functional environments. From complete garden renovations to regular lawn maintenance, we deliver exceptional results."
+  },
+  "gallery": {
+    "title": "Our Project Gallery",
+    "description": "Browse our collection of completed landscaping and garden projects."
+  },
+  "showcase": {
+    "title": "Let's create your dream garden with our professional garden and landscaping services",
+    "cta": "View Gallery"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We offer a comprehensive range of garden and landscaping services to meet all your outdoor needs.",
+    "items": {
+      "lawnCare": {
+        "title": "Lawn Care & Maintenance",
+        "description": "Regular mowing, fertilizing, aeration, and weed control to keep your lawn healthy and vibrant all year round."
+      },
+      "gardenDesign": {
+        "title": "Garden Design",
+        "description": "Custom garden designs that reflect your style and meet your needs, from modern minimalist to lush traditional."
+      },
+      "planting": {
+        "title": "Planting Services",
+        "description": "Expert selection and installation of trees, shrubs, flowers, and other plants suitable for your local climate and soil conditions."
+      },
+      "irrigation": {
+        "title": "Irrigation Systems",
+        "description": "Planning and installation of efficient irrigation systems to ensure your garden is optimally watered with minimal water usage."
+      },
+      "landscaping": {
+        "title": "Landscaping",
+        "description": "Creation of patios, walkways, retaining walls, and other structural elements that complement your landscape design."
+      },
+      "seasonalCleaning": {
+        "title": "Seasonal Cleaning",
+        "description": "Thorough spring and fall cleanup to prepare your garden for the growing season or winter months."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Don't just take our word for it - hear what our satisfied customers have to say about our services.",
+    "items": [
+      {
+        "text": "\"Cristian transformed our backyard from a barren wasteland into a lush paradise. His attention to detail and knowledge of plants is impressive! We couldn't be happier with the results.\"",
+        "author": "Maria D."
+      },
+      {
+        "text": "\"We've tried several gardeners before, but none compare to Christian's expertise. Our lawn has never looked better! His team is professional, punctual, and truly cares about the work they do.\"",
+        "author": "John T."
+      },
+      {
+        "text": "\"Professional, punctual, and passionate about his work. Cristian doesn't just do the job, he creates art with nature. Our garden has become the envy of the neighborhood.\"",
+        "author": "Elena M."
+      }
+    ]
+  }
+}

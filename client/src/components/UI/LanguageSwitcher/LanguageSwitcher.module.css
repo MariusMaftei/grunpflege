@@ -1,0 +1,110 @@
+.languageSwitcher {
+  position: relative;
+  margin-right: 20px;
+}
+
+.languageButton {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.languageButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.languageDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 5px;
+  background-color: #1a2e05;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 100;
+  min-width: 120px;
+}
+
+.languageOption {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.languageOption:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.languageOption.active {
+  background-color: var(--accent);
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .languageSwitcher {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 70px;
+    margin-right: 0;
+  }
+
+  .languageButton {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+
+  .globeIcon {
+    font-size: 0.875rem;
+  }
+
+  .languageCode {
+    font-size: 0.75rem;
+  }
+}
+
+.globeIcon {
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.languageCode {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 480px) {
+  .languageSwitcher {
+    right: 65px;
+  }
+
+  .languageButton {
+    padding: 4px 6px;
+  }
+
+  .languageDropdown {
+    min-width: 100px;
+  }
+
+  .languageOption {
+    padding: 8px 12px;
+    font-size: 0.8125rem;
+  }
+}

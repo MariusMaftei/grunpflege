@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "Have questions about our services or want to schedule a consultation? Our team is available to help you design the garden of your dreams."
+  },
+  "contactMethods": {
+    "title": "Contact Methods",
+    "description": "Choose the most convenient way to reach our team of garden experts",
+    "phone": {
+      "title": "Phone",
+      "description": "Mon-Fri: 8:00-18:00, Sat: 9:00-16:00"
+    },
+    "email": {
+      "title": "Email",
+      "description": "We respond within 24 hours"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "description": "Available for quick inquiries"
+    }
+  },
+  "contactInfo": {
+    "title": "Contact Information",
+    "description": "Have questions or concerns? Contact us anytime. Our team is available to help transform your outdoor space into the dream garden you've always wanted.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "openingHours": "Opening Hours",
+    "followUs": "Follow Us"
+  },
+  "map": {
+    "title": "Hösbach Location"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We offer a comprehensive range of professional garden and landscaping services to meet all your outdoor needs.",
+    "items": {
+      "lawnCare": {
+        "title": "Lawn Care & Maintenance",
+        "description": "Regular mowing, fertilizing, aeration, and weed control to keep your lawn healthy and vibrant all year round."
+      },
+      "gardenDesign": {
+        "title": "Garden Design",
+        "description": "Custom garden designs that reflect your style and meet your needs, from modern minimalist to lush traditional."
+      },
+      "planting": {
+        "title": "Planting Services",
+        "description": "Expert selection and installation of trees, shrubs, flowers, and other plants suitable for your local climate."
+      },
+      "irrigation": {
+        "title": "Irrigation Systems",
+        "description": "Planning and installation of efficient irrigation systems to ensure your garden is optimally watered."
+      }
+    }
+  },
+  "whyChoose": {
+    "title": "Why Choose Us",
+    "description": "With over 15 years of experience in the industry, we take pride in delivering exceptional service and results.",
+    "items": {
+      "experiencedTeam": {
+        "title": "Experienced Team",
+        "description": "Our team of qualified professionals has years of experience in garden and landscape construction."
+      },
+      "qualityMaterials": {
+        "title": "Quality Materials",
+        "description": "We use only the highest quality plants, materials, and equipment for all our projects."
+      },
+      "customSolutions": {
+        "title": "Custom Solutions",
+        "description": "We develop tailored solutions that meet your specific needs and preferences."
+      },
+      "satisfaction": {
+        "title": "Satisfaction Guarantee",
+        "description": "We're not satisfied until you're completely happy with the results of our work."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to commonly asked questions about our services, processes, and policies.",
+    "items": [
+      {
+        "question": "What areas do you service?",
+        "answer": "We currently offer our garden and landscaping services throughout Green City and within a 50-kilometer radius."
+      },
+      {
+        "question": "Do you offer free consultations?",
+        "answer": "Yes! We offer a free initial consultation to discuss your garden needs and provide a general estimate for your project."
+      },
+      {
+        "question": "How far in advance should I book your services?",
+        "answer": "For regular maintenance work, a 1-2 week lead time is usually sufficient. For larger landscaping projects, we recommend booking 3-4 weeks in advance, especially during the peak spring and summer seasons."
+      },
+      {
+        "question": "Do you offer garden maintenance plans?",
+        "answer": "We offer customized maintenance plans tailored to your garden's specific needs, with options for weekly, bi-weekly, or monthly maintenance."
+      }
+    ]
+  },
+  "schedule": {
+    "title": "Ready to Transform Your Outdoor Space?",
+    "description": "Schedule a consultation with our expert team and take the first step toward creating the garden of your dreams.",
+    "button": "Book an Appointment"
+  }
+}

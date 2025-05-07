@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "phone": "01629441238",
+  "footer": {
+    "description": "Professional garden and landscaping services with over 15 years of experience. We transform outdoor spaces into beautiful, functional environments.",
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "services": "Services",
+    "lawnCare": "Lawn Care",
+    "gardenDesign": "Garden Design",
+    "planting": "Planting & Maintenance",
+    "irrigation": "Irrigation Systems",
+    "landscaping": "Landscaping",
+    "openingHours": "Opening Hours",
+    "monday": "Monday - Friday: 8:00 - 18:00",
+    "saturday": "Saturday: 9:00 - 16:00",
+    "sunday": "Sunday: Closed",
+    "copyright": "© {{year}} Cristian Bogdan Ciobanu Landscaping Services. All rights reserved."
+  }
+}

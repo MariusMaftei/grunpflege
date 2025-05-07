@@ -1,0 +1,951 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  background-color: var(--background-light);
+}
+
+/* Hero Section */
+.contactHero {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z2FyZGVuJTIwcGhvbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1200&q=60");
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  padding: 8rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30, 60, 30, 0.85),
+    rgba(30, 60, 30, 0.7)
+  );
+  z-index: 1;
+}
+
+.contactHeroContent {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.contactTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contactSubtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #c6c6c6;
+
+  line-height: 1.6;
+}
+
+.heroCta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: var(--accent);
+  color: var(--text-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ctaIcon {
+  margin-right: 0.5rem;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ctaWhatsapp {
+  background-color: #25d366;
+  color: white;
+}
+
+/* Contact Methods Section - Replace Contact Cards Section */
+.contactMethodsSection {
+  padding: 5rem 0;
+  background-color: var(--background-light);
+}
+
+.contactMethodsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.contactMethodsHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contactMethodsTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  position: relative;
+  display: inline-block;
+}
+
+.contactMethodsTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+.contactMethodsDescription {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.contactMethodsGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Reduce minimum width */
+  gap: 2rem;
+}
+
+.contactMethodCard {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contactMethodCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.contactMethodIcon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--background-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contactMethodCard:hover .contactMethodIcon {
+  background-color: var(--primary);
+  color: white;
+}
+
+.contactMethodContent {
+  flex: 1;
+}
+
+.contactMethodTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.contactMethodValue {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+  word-break: break-word; /* Add word break for long emails */
+  overflow-wrap: break-word; /* Ensure text wraps properly */
+}
+
+.contactMethodValue:hover {
+  color: var(--accent);
+}
+
+.contactMethodDescription {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Main Contact Section */
+.mainContactSection {
+  padding: 6rem 0;
+  background-color: var(--background-off);
+}
+
+.mainContactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 0 1.5rem;
+}
+
+.contactInfoPanel {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contactInfoHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.contactInfoHeaderIcon {
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin-right: 1rem;
+}
+
+.contactInfoTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.contactInfoDescription {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+.contactInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.contactInfoItem {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contactInfoItemIcon {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.25rem;
+  font-size: 1.25rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contactInfoItem:hover .contactInfoItemIcon {
+  background-color: var(--accent);
+  color: var(--text-dark);
+}
+
+.contactInfoItemContent {
+  flex: 1;
+}
+
+.contactInfoItemLabel {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--text-light);
+}
+
+.contactInfoItemValue {
+  font-size: 1.125rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+.contactInfoItemValue:hover {
+  color: white;
+}
+
+.socialLinks {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+}
+
+.socialIcon:hover {
+  background-color: var(--accent);
+  transform: translateY(-5px);
+  color: var(--text-dark);
+}
+
+.mapPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapHeader {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+}
+
+.mapHeaderIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--accent);
+}
+
+.mapHeaderTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mapContainer {
+  flex: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-off);
+  max-width: 100%;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Fixed height for better mobile display */
+}
+
+.simpleMapContainer {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-off);
+  position: relative;
+  overflow: hidden;
+}
+
+.simpleMapIframe {
+  border: none;
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: 6rem 0;
+  background-color: white;
+}
+
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.servicesTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.servicesDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.serviceItem {
+  background-color: var(--background-off);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.serviceItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.serviceItemIcon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--background-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.serviceItem:hover .serviceItemIcon {
+  background-color: var(--primary);
+  color: white;
+}
+
+.serviceItemContent {
+  flex: 1;
+}
+
+.serviceItemTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.serviceItemDescription {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Why Choose Us Section */
+.whyChooseSection {
+  padding: 6rem 0;
+  background-color: var(--background-accent);
+}
+
+.whyChooseContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.whyChooseTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.whyChooseDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.whyChooseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.whyChooseItem {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.whyChooseItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.whyChooseIcon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--background-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.whyChooseItemTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.whyChooseItemDescription {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 6rem 0;
+  background-color: white;
+}
+
+.faqContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.faqTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.faqDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+}
+
+.faqItem {
+  background-color: var(--background-off);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.faqQuestion {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.faqQuestion svg {
+  margin-right: 0.75rem;
+  color: var(--accent);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.faqAnswer {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Schedule Section - Replace CTA Section */
+.scheduleSection {
+  padding: 6rem 0;
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scheduleSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://www.pashleymanorgardens.com/wp-content/uploads/2017/12/PASHLEY-MANOR-GARDENS-Tulip-beds-lawn-and-lake-by-David-Dixon-1400x660.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.scheduleContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.scheduleTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.scheduleDescription {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+  color: #c6c6c6;
+  line-height: 1.6;
+}
+
+.scheduleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  color: var(--text-dark);
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scheduleButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.scheduleButtonIcon {
+  margin-right: 0.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .mainContactContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mapPanel {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactHero {
+    padding: 6rem 1.5rem;
+  }
+
+  .contactTitle {
+    font-size: 2.5rem;
+  }
+
+  .contactSubtitle {
+    font-size: 1.125rem;
+  }
+
+  .heroCta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contactMethodsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactMethodsTitle {
+    font-size: 2rem;
+  }
+
+  .scheduleTitle {
+    font-size: 2rem;
+  }
+
+  .scheduleDescription {
+    font-size: 1.125rem;
+  }
+
+  .contactInfoPanel {
+    padding: 2rem;
+  }
+
+  .servicesGrid,
+  .whyChooseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaDescription {
+    font-size: 1.125rem;
+  }
+
+  .contactMethodCard {
+    padding: 2rem 1.5rem; /* Reduce padding on smaller screens */
+  }
+
+  .contactMethodValue {
+    font-size: 1.125rem; /* Slightly smaller font on mobile */
+  }
+
+  .mapContainer {
+    height: 350px; /* Slightly smaller on mobile */
+  }
+
+  .mapPanel {
+    width: 100%;
+  }
+
+  .mapHeader {
+    padding: 1rem;
+  }
+
+  .mapHeaderTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactTitle {
+    font-size: 2rem;
+  }
+
+  .contactInfoTitle,
+  .servicesTitle,
+  .whyChooseTitle,
+  .faqTitle {
+    font-size: 1.75rem;
+  }
+
+  .contactInfoItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactMethodCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactMethodIcon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .contactInfoItemIcon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .mapContainer {
+    height: 300px; /* Even smaller on very small screens */
+  }
+}
+
+/* Add these specific media queries for iPhone 12 Pro and similar devices */
+@media (max-width: 390px) {
+  .contactInfoPanel {
+    padding: 1.5rem;
+  }
+
+  .contactInfoTitle {
+    font-size: 1.5rem;
+  }
+
+  .contactInfoDescription {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactInfoItemLabel {
+    font-size: 1rem;
+  }
+
+  .contactInfoItemValue {
+    font-size: 1rem;
+  }
+
+  .mapHeaderTitle {
+    font-size: 0.9rem;
+  }
+
+  .mapHeader {
+    padding: 0.75rem;
+  }
+
+  .mapHeaderIcon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+
+  /* Improved map container for iPhone 12 Pro */
+  .mapContainer {
+    height: auto;
+    min-height: 350px; /* Increased height for better visibility */
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .simpleMapContainer {
+    position: relative;
+    padding-bottom: 100%; /* Square aspect ratio for better map visibility */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .simpleMapIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .contactInfoItem {
+    margin-bottom: 1rem;
+  }
+
+  .socialLinks {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .socialTitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .socialIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Ensure the map panel takes full width */
+  .mapPanel {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* Adjust main contact container spacing */
+  .mainContactContainer {
+    gap: 1.5rem;
+  }
+}

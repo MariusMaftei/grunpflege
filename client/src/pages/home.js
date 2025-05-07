@@ -1,0 +1,157 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../i18n";
+import { useTranslation } from "react-i18next";
+import styles from "./home.module.css";
+
+import BeforeAfterSlider from "../components/UI/BeforeAfterSlider/BeforeAfterSlider";
+import ServicesSection from "../components/sections/ServiceSection/ServiceSection";
+import InfiniteCarousel from "../components/UI/InfiniteCarousel/InfiniteCarousel";
+
+import CoverImage from "../assets/images/cover.jpg";
+import RoundaboutImage from "../assets/images/roundabout.jpg";
+import GardenBeforeImage from "../assets/images/garden-before.png";
+import GardenAfterImage from "../assets/images/garden-after.png";
+import GrassBeforeImage from "../assets/images/grass-before.jpeg";
+import GrassAfterImage from "../assets/images/grass-after.jpg";
+
+export default function HomePage() {
+  const { t } = useTranslation("home");
+
+  // This ensures that the translations are loaded
+  useEffect(() => {
+    // This is just to trigger a re-render when the language changes
+  }, [t]);
+
+  return (
+    <div className={styles.pageContainer}>
+      <main className={styles.main}>
+        {/* Hero Section with Real Image */}
+        <section className={styles.heroSection}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>{t("hero.title")}</h1>
+            <p className={styles.heroSubtitle}>{t("hero.subtitle")}</p>
+            <Link to="/contact" className={styles.ctaButton}>
+              {t("hero.cta")}
+            </Link>
+          </div>
+        </section>
+
+        {/* Transformation Showcase with Real Images */}
+        <section className={styles.transformationSection}>
+          <div className={styles.sectionContainer}>
+            <div className="text-center">
+              <h2 className={styles.sectionTitle}>
+                {t("transformation.title")}
+              </h2>
+              <p className={styles.sectionDescription}>
+                {t("transformation.description")}
+              </p>
+            </div>
+
+            <div className={styles.slidersGrid}>
+              {/* Slider 1: Roundabout Project */}
+              <div>
+                <h3 className={styles.sliderTitle}>
+                  {t("transformation.sliders.roundabout.title")}
+                </h3>
+                <div className={styles.sliderContainer}>
+                  <BeforeAfterSlider
+                    beforeImage={CoverImage}
+                    afterImage={RoundaboutImage}
+                    beforeLabel={t("transformation.sliders.roundabout.before")}
+                    afterLabel={t("transformation.sliders.roundabout.after")}
+                  />
+                </div>
+              </div>
+
+              {/* Slider 2: Lawn Maintenance */}
+              <div>
+                <h3 className={styles.sliderTitle}>
+                  {t("transformation.sliders.lawn.title")}
+                </h3>
+                <div className={styles.sliderContainer}>
+                  <BeforeAfterSlider
+                    beforeImage={GrassBeforeImage}
+                    afterImage={GrassAfterImage}
+                    beforeLabel={t("transformation.sliders.lawn.before")}
+                    afterLabel={t("transformation.sliders.lawn.after")}
+                  />
+                </div>
+              </div>
+
+              {/* Slider 3: Garden Renovation */}
+              <div>
+                <h3 className={styles.sliderTitle}>
+                  {t("transformation.sliders.garden.title")}
+                </h3>
+                <div className={styles.sliderContainer}>
+                  <BeforeAfterSlider
+                    beforeImage={GardenBeforeImage}
+                    afterImage={GardenAfterImage}
+                    beforeLabel={t("transformation.sliders.garden.before")}
+                    afterLabel={t("transformation.sliders.garden.after")}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <p className={styles.transformationCaption}>
+              {t("transformation.caption")}
+            </p>
+          </div>
+        </section>
+
+        {/* Project Gallery Carousel */}
+        <section id="gallery" className={styles.gallerySection}>
+          <div className={styles.sectionContainer}>
+            <div className="text-center">
+              <h2 className={styles.sectionTitle}>{t("gallery.title")}</h2>
+              <p className={styles.sectionDescription}>
+                {t("gallery.description")}
+              </p>
+            </div>
+            <InfiniteCarousel />
+          </div>
+        </section>
+
+        {/* Garden Showcase Section */}
+        <section className={styles.gardenShowcaseSection}>
+          <div className={styles.showcaseContent}>
+            <h2 className={styles.showcaseTitle}>{t("showcase.title")}</h2>
+            <Link to="/gallery" className={styles.ctaButton}>
+              {t("showcase.cta")}
+            </Link>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <ServicesSection />
+
+        {/* Testimonials Section */}
+        <section className={styles.testimonialsSection}>
+          <div className={styles.sectionContainer}>
+            <div className="text-center">
+              <h2 className={styles.sectionTitle}>{t("testimonials.title")}</h2>
+              <p className={styles.sectionDescription}>
+                {t("testimonials.description")}
+              </p>
+            </div>
+            <div className={styles.testimonialGrid}>
+              {t("testimonials.items", { returnObjects: true }).map(
+                (testimonial, index) => (
+                  <div key={index} className={styles.testimonialCard}>
+                    <p className={styles.testimonialText}>{testimonial.text}</p>
+                    <p className={styles.testimonialAuthor}>
+                      {testimonial.author}
+                    </p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}

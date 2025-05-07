@@ -1,0 +1,34 @@
+{
+  "title": "Unsere Projektgalerie",
+  "description": "Durchstöbern Sie unsere Sammlung abgeschlossener Landschafts- und Gartenprojekte. Filtern Sie nach Kategorie, um die Inspiration zu finden, nach der Sie suchen.",
+  "filter": {
+    "label": "Nach Kategorie filtern:",
+    "categories": {
+      "all": "Alle Projekte",
+      "gardens": "Gartengestaltung",
+      "lawns": "Rasenpflege",
+      "trees": "Baumpflanzung"
+    }
+  },
+  "emptyState": "Keine Projekte in dieser Kategorie gefunden. Bitte versuchen Sie einen anderen Filter.",
+  "gardenDescriptions": {
+    "perennialPath": "Staudengartenweg-Design",
+    "japaneseGarden": "Japanisch inspirierter Garten mit Kirschblüten",
+    "formalTulip": "Formale Tulpengarten-Installation",
+    "stoneBorder": "Natürliche Steingrenze mit heimischen Pflanzen",
+    "luxuryEstate": "Luxuriöses Anwesen-Gartendesign"
+  },
+  "lawnDescriptions": {
+    "premiumInstallation": "Premium-Raseninstallation",
+    "droughtResistant": "Trockenheitsresistente Rasenlösungen",
+    "ornamentalGrass": "Ziergras-Gartendesign",
+    "professionalCare": "Professionelle Rasenpflegedienste"
+  },
+  "treeDescriptions": {
+    "expertPlanting": "Experten-Baumpflanzservice",
+    "matureTrees": "Installation ausgewachsener Bäume",
+    "ornamentalSelection": "Auswahl von Zierbäumen",
+    "properTechniques": "Richtige Baumpflanztechniken",
+    "historicOaks": "Erhaltung historischer Eichen"
+  }
+}

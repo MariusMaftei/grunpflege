@@ -1,0 +1,34 @@
+{
+  "title": "Our Project Gallery",
+  "description": "Browse our collection of completed landscaping and garden projects. Filter by category to find the inspiration you're looking for.",
+  "filter": {
+    "label": "Filter by category:",
+    "categories": {
+      "all": "All Projects",
+      "gardens": "Garden Design",
+      "lawns": "Lawn Care",
+      "trees": "Tree Planting"
+    }
+  },
+  "emptyState": "No projects found in this category. Please try a different filter.",
+  "gardenDescriptions": {
+    "perennialPath": "Perennial Garden Path Design",
+    "japaneseGarden": "Japanese Inspired Garden with Cherry Blossoms",
+    "formalTulip": "Formal Tulip Garden Installation",
+    "stoneBorder": "Natural Stone Border with Native Plants",
+    "luxuryEstate": "Luxury Estate Garden Design"
+  },
+  "lawnDescriptions": {
+    "premiumInstallation": "Premium Lawn Installation",
+    "droughtResistant": "Drought Resistant Lawn Solutions",
+    "ornamentalGrass": "Ornamental Grass Garden Design",
+    "professionalCare": "Professional Lawn Care Services"
+  },
+  "treeDescriptions": {
+    "expertPlanting": "Expert Tree Planting Service",
+    "matureTrees": "Mature Tree Installation",
+    "ornamentalSelection": "Ornamental Tree Selection",
+    "properTechniques": "Proper Tree Planting Techniques",
+    "historicOaks": "Historic Oak Preservation"
+  }
+}

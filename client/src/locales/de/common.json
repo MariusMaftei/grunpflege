@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "gallery": "Galerie",
+    "contact": "Kontakt"
+  },
+  "phone": "01629441238",
+  "footer": {
+    "description": "Professionelle Garten- und Landschaftsbaudienstleistungen mit über 15 Jahren Erfahrung. Wir verwandeln Außenbereiche in schöne, funktionale Umgebungen.",
+    "contact": "Kontakt",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "address": "Adresse",
+    "services": "Dienstleistungen",
+    "lawnCare": "Rasenpflege",
+    "gardenDesign": "Gartengestaltung",
+    "planting": "Pflanzung & Wartung",
+    "irrigation": "Bewässerungssysteme",
+    "landscaping": "Landschaftsbau",
+    "openingHours": "Öffnungszeiten",
+    "monday": "Montag - Freitag: 8:00 - 18:00",
+    "saturday": "Samstag: 9:00 - 16:00",
+    "sunday": "Sonntag: Geschlossen",
+    "copyright": "© {{year}} Cristian Bogdan Ciobanu Gartenbaudienstleistungen. Alle Rechte vorbehalten."
+  }
+}

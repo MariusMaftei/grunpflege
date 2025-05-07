@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Verwandeln Sie Ihren Außenbereich",
+    "subtitle": "Professionelle Garten- und Landschaftsbaudienstleistungen von Cristian Bogdan Ciobanu",
+    "cta": "Beratungstermin vereinbaren"
+  },
+  "transformation": {
+    "title": "Unsere Verwandlungen",
+    "description": "Ziehen Sie die Schieberegler, um die Vorher- und Nachher-Ergebnisse unserer professionellen Landschaftsgestaltung zu sehen.",
+    "sliders": {
+      "roundabout": {
+        "title": "Kreisverkehr-Projekt",
+        "before": "Während der Arbeit",
+        "after": "Abgeschlossenes Projekt"
+      },
+      "lawn": {
+        "title": "Rasenpflege",
+        "before": "Während des Service",
+        "after": "Abgeschlossener Service"
+      },
+      "garden": {
+        "title": "Gartenrenovierung",
+        "before": "Vorher",
+        "after": "Nachher"
+      }
+    },
+    "caption": "Unsere professionellen Landschaftsbaudienstleistungen verwandeln gewöhnliche Außenbereiche in schöne, funktionale Umgebungen. Von kompletten Gartenrenovierungen bis hin zur regelmäßigen Rasenpflege liefern wir außergewöhnliche Ergebnisse."
+  },
+  "gallery": {
+    "title": "Unsere Projektgalerie",
+    "description": "Durchstöbern Sie unsere Sammlung abgeschlossener Landschafts- und Gartenprojekte."
+  },
+  "showcase": {
+    "title": "Lassen Sie uns Ihren Traumgarten mit unseren professionellen Garten- und Landschaftsbaudienstleistungen gestalten",
+    "cta": "Galerie ansehen"
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "description": "Wir bieten eine umfassende Palette an Garten- und Landschaftsbaudienstleistungen, um alle Ihre Anforderungen im Außenbereich zu erfüllen.",
+    "items": {
+      "lawnCare": {
+        "title": "Rasenpflege & Wartung",
+        "description": "Regelmäßiges Mähen, Düngen, Belüften und Unkrautbekämpfung, um Ihren Rasen das ganze Jahr über gesund und lebendig zu halten."
+      },
+      "gardenDesign": {
+        "title": "Gartengestaltung",
+        "description": "Maßgeschneiderte Gartenentwürfe, die Ihren Stil widerspiegeln und Ihren Bedürfnissen entsprechen, von modern-minimalistisch bis üppig-traditionell."
+      },
+      "planting": {
+        "title": "Pflanzservice",
+        "description": "Fachkundige Auswahl und Installation von Bäumen, Sträuchern, Blumen und anderen Pflanzen, die für Ihr lokales Klima und Ihre Bodenbedingungen geeignet sind."
+      },
+      "irrigation": {
+        "title": "Bewässerungssysteme",
+        "description": "Planung und Installation effizienter Bewässerungssysteme, um sicherzustellen, dass Ihr Garten mit minimalem Wasserverbrauch optimal bewässert wird."
+      },
+      "landscaping": {
+        "title": "Landschaftsbau",
+        "description": "Erstellung von Terrassen, Gehwegen, Stützmauern und anderen strukturellen Elementen, die Ihr Landschaftsdesign ergänzen."
+      },
+      "seasonalCleaning": {
+        "title": "Saisonale Reinigung",
+        "description": "Gründliche Frühjahrs- und Herbstreinigung, um Ihren Garten auf die Wachstumsperiode oder die Wintermonate vorzubereiten."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "description": "Nehmen Sie nicht nur unser Wort dafür - hören Sie, was unsere zufriedenen Kunden über unsere Dienstleistungen sagen.",
+    "items": [
+      {
+        "text": "\"Cristian hat unseren Hinterhof von einer kahlen Ödnis in ein üppiges Paradies verwandelt. Seine Liebe zum Detail und sein Wissen über Pflanzen sind beeindruckend! Wir könnten mit den Ergebnissen nicht glücklicher sein.\"",
+        "author": "Maria D."
+      },
+      {
+        "text": "\"Wir haben schon mehrere Gärtner ausprobiert, aber keiner ist mit Christians Fachwissen vergleichbar. Unser Rasen hat noch nie besser ausgesehen! Sein Team ist professionell, pünktlich und kümmert sich wirklich um die Arbeit, die sie leisten.\"",
+        "author": "Johannes T."
+      },
+      {
+        "text": "\"Professionell, pünktlich und leidenschaftlich bei seiner Arbeit. Cristian erledigt nicht nur den Job, er erschafft Kunst mit der Natur. Unser Garten ist zum Neid der Nachbarschaft geworden.\"",
+        "author": "Elena M."
+      }
+    ]
+  }
+}
