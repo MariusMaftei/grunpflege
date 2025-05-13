@@ -16,19 +16,34 @@
     "japaneseGarden": "Japanisch inspirierter Garten mit Kirschblüten",
     "formalTulip": "Formale Tulpengarten-Installation",
     "stoneBorder": "Natürliche Steingrenze mit heimischen Pflanzen",
-    "luxuryEstate": "Luxuriöses Anwesen-Gartendesign"
+    "luxuryEstate": "Luxuriöses Anwesen-Gartendesign",
+    "springPlanning": "Frühlingsblumenzwiebelgarten-Planung",
+    "springRevitalization": "Frühlingsgartenrevitalisierung",
+    "cottageDesign": "Cottage-Garten-Randdesign",
+    "ecoFriendly": "Umweltfreundlicher Frühlingsblumengarten",
+    "colorfulSpring": "Farbenfrohe Frühlingsblumen-Installation"
   },
   "lawnDescriptions": {
     "premiumInstallation": "Premium-Raseninstallation",
     "droughtResistant": "Trockenheitsresistente Rasenlösungen",
     "ornamentalGrass": "Ziergras-Gartendesign",
-    "professionalCare": "Professionelle Rasenpflegedienste"
+    "professionalCare": "Professionelle Rasenpflegedienste",
+    "completeRenovation": "Komplette Rasenerneuerung",
+    "residentialInstallation": "Wohnrasen-Installation",
+    "ecoFriendlyCare": "Umweltfreundliche Rasenpflege",
+    "seasonalTreatment": "Saisonale Rasenbehandlung",
+    "aerationFertilization": "Rasenbelüftung und Düngung"
   },
   "treeDescriptions": {
     "expertPlanting": "Experten-Baumpflanzservice",
     "matureTrees": "Installation ausgewachsener Bäume",
     "ornamentalSelection": "Auswahl von Zierbäumen",
     "properTechniques": "Richtige Baumpflanztechniken",
-    "historicOaks": "Erhaltung historischer Eichen"
+    "historicOaks": "Erhaltung historischer Eichen",
+    "dwarfTreeDesign": "Zwergbaum-Gartengestaltung",
+    "largeTreeTransplanting": "Großbaum-Verpflanzungsservice",
+    "containerPlanting": "Baumpflanzung in Containern",
+    "rootCare": "Wurzelpflege für gesunde Bäume",
+    "professionalPlanting": "Professionelle Baumpflanzung"
   }
 }

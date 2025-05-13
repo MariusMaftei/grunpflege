@@ -8,12 +8,12 @@ import BeforeAfterSlider from "../components/UI/BeforeAfterSlider/BeforeAfterSli
 import ServicesSection from "../components/sections/ServiceSection/ServiceSection";
 import InfiniteCarousel from "../components/UI/InfiniteCarousel/InfiniteCarousel";
 
-import CoverImage from "../assets/images/cover.jpg";
-import RoundaboutImage from "../assets/images/roundabout.jpg";
-import GardenBeforeImage from "../assets/images/garden-before.png";
-import GardenAfterImage from "../assets/images/garden-after.png";
-import GrassBeforeImage from "../assets/images/grass-before.jpeg";
-import GrassAfterImage from "../assets/images/grass-after.jpg";
+import RoundaboutBeforeImage from "../assets/images/gallery/before-after/roundabout-before.webp";
+import RoundaboutAfterImage from "../assets/images/gallery/before-after/roundabout-after.webp";
+import GardenBeforeImage from "../assets/images/gallery/before-after/garden-before.webp";
+import GardenAfterImage from "../assets/images/gallery/before-after/garden-after.webp";
+import GrassBeforeImage from "../assets/images/gallery/before-after/grass-before.webp";
+import GrassAfterImage from "../assets/images/gallery/before-after/grass-after.webp";
 
 export default function HomePage() {
   const { t } = useTranslation("home");
@@ -57,8 +57,8 @@ export default function HomePage() {
                 </h3>
                 <div className={styles.sliderContainer}>
                   <BeforeAfterSlider
-                    beforeImage={CoverImage}
-                    afterImage={RoundaboutImage}
+                    beforeImage={RoundaboutBeforeImage}
+                    afterImage={RoundaboutAfterImage}
                     beforeLabel={t("transformation.sliders.roundabout.before")}
                     afterLabel={t("transformation.sliders.roundabout.after")}
                   />

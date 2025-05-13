@@ -12,7 +12,7 @@
 /* Hero Section */
 .contactHero {
   position: relative;
-  background-image: url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z2FyZGVuJTIwcGhvbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1200&q=60");
+  background-image: url("../../assets/images/cover/grunpflege-cover-3.webp");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
@@ -669,7 +669,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("https://www.pashleymanorgardens.com/wp-content/uploads/2017/12/PASHLEY-MANOR-GARDENS-Tulip-beds-lawn-and-lake-by-David-Dixon-1400x660.jpg");
+  background-image: url("../../assets/images/cover/grunpflege-cover-4.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.1;

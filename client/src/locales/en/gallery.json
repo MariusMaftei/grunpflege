@@ -16,19 +16,34 @@
     "japaneseGarden": "Japanese Inspired Garden with Cherry Blossoms",
     "formalTulip": "Formal Tulip Garden Installation",
     "stoneBorder": "Natural Stone Border with Native Plants",
-    "luxuryEstate": "Luxury Estate Garden Design"
+    "luxuryEstate": "Luxury Estate Garden Design",
+    "springPlanning": "Spring Flower Bulb Garden Planning",
+    "springRevitalization": "Spring Garden Revitalization",
+    "cottageDesign": "Cottage Garden Border Design",
+    "ecoFriendly": "Eco-Friendly Spring Flower Garden",
+    "colorfulSpring": "Colorful Spring Flower Installation"
   },
   "lawnDescriptions": {
     "premiumInstallation": "Premium Lawn Installation",
     "droughtResistant": "Drought Resistant Lawn Solutions",
     "ornamentalGrass": "Ornamental Grass Garden Design",
-    "professionalCare": "Professional Lawn Care Services"
+    "professionalCare": "Professional Lawn Care Services",
+    "completeRenovation": "Complete Lawn Renovation",
+    "residentialInstallation": "Residential Lawn Installation",
+    "ecoFriendlyCare": "Eco-Friendly Lawn Care",
+    "seasonalTreatment": "Seasonal Lawn Treatment",
+    "aerationFertilization": "Lawn Aeration and Fertilization"
   },
   "treeDescriptions": {
     "expertPlanting": "Expert Tree Planting Service",
     "matureTrees": "Mature Tree Installation",
     "ornamentalSelection": "Ornamental Tree Selection",
     "properTechniques": "Proper Tree Planting Techniques",
-    "historicOaks": "Historic Oak Preservation"
+    "historicOaks": "Historic Oak Preservation",
+    "dwarfTreeDesign": "Dwarf Tree Garden Design",
+    "largeTreeTransplanting": "Large Tree Transplanting Service",
+    "containerPlanting": "Container Tree Planting",
+    "rootCare": "Root Care for Healthy Trees",
+    "professionalPlanting": "Professional Tree Planting"
   }
 }

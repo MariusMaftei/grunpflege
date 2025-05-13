@@ -15,10 +15,30 @@
   padding: 10rem 1.5rem;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url("https://images7.alphacoders.com/950/950368.jpg");
+    url("../assets/images/cover/grunpflege-cover-1-desktop.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+/* Add tablet media query for heroSection */
+@media (max-width: 992px) {
+  .heroSection {
+    padding: 8rem 1.5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("../assets/images/cover/grunpflege-cover-1-tablet.webp");
+    background-attachment: fixed; /* Keep fixed background for parallax effect */
+  }
+}
+
+/* Add mobile media query for heroSection */
+@media (max-width: 390px) {
+  .heroSection {
+    padding: 6rem 1.5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url("../assets/images/cover/grunpflege-cover-1-mobile.webp");
+    background-attachment: fixed; /* Keep fixed background for parallax effect */
+  }
 }
 
 .heroContent {
@@ -45,7 +65,6 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  color: rgb(183, 183, 175);
 }
 
 .ctaButton {
@@ -202,11 +221,31 @@
   padding: 10rem 1.5rem;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/911447-download-free-beautiful-garden-wallpaper-1920x1080-for-retina.jpg-Q6gxZ0A8MXdVEgSjO41fAtHAs9uJJI.jpeg");
+    url("../assets/images/cover/grunpflege-cover-2-desktop.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   margin-top: 0;
+}
+
+/* Add tablet media query for gardenShowcaseSection */
+@media (max-width: 992px) {
+  .gardenShowcaseSection {
+    padding: 8rem 1.5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+      url("../assets/images/cover/grunpflege-cover-2-tablet.webp");
+    background-attachment: fixed; /* Keep fixed background for parallax effect */
+  }
+}
+
+/* Add mobile media query for gardenShowcaseSection */
+@media (max-width: 390px) {
+  .gardenShowcaseSection {
+    padding: 6rem 1.5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+      url("../assets/images/cover/grunpflege-cover-2-mobile.webp");
+    background-attachment: fixed; /* Keep fixed background for parallax effect */
+  }
 }
 
 .showcaseContent {

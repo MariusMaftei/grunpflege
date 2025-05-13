@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import styles from "./BeforeAfterSlider.module.css";
 
 export default function BeforeAfterSlider({
@@ -7,50 +7,34 @@ export default function BeforeAfterSlider({
   beforeLabel = "Before",
   afterLabel = "After",
 }) {
-  // Changed initial slider position from 50% to 25% (more to the left)
   const [sliderPosition, setSliderPosition] = useState(25);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef(null);
 
-  const handleMouseDown = () => {
-    setIsDragging(true);
-  };
+  const handleMouseDown = () => setIsDragging(true);
+  const handleMouseUp = () => setIsDragging(false);
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const handleMouseMove = useCallback(
+    (e) => {
+      if (isDragging && containerRef.current) {
+        const { left, width } = containerRef.current.getBoundingClientRect();
+        let newPosition = ((e.clientX - left) / width) * 100;
+        setSliderPosition(Math.max(0, Math.min(100, newPosition)));
+      }
+    },
+    [isDragging]
+  );
 
-  const handleMouseMove = (e) => {
-    if (isDragging && containerRef.current) {
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const containerWidth = containerRect.width;
-      const mouseX = e.clientX - containerRect.left;
-
-      // Calculate position as percentage
-      let newPosition = (mouseX / containerWidth) * 100;
-
-      // Clamp position between 0 and 100
-      newPosition = Math.max(0, Math.min(100, newPosition));
-
-      setSliderPosition(newPosition);
-    }
-  };
-
-  const handleTouchMove = (e) => {
-    if (isDragging && containerRef.current) {
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const containerWidth = containerRect.width;
-      const touchX = e.touches[0].clientX - containerRect.left;
-
-      // Calculate position as percentage
-      let newPosition = (touchX / containerWidth) * 100;
-
-      // Clamp position between 0 and 100
-      newPosition = Math.max(0, Math.min(100, newPosition));
-
-      setSliderPosition(newPosition);
-    }
-  };
+  const handleTouchMove = useCallback(
+    (e) => {
+      if (isDragging && containerRef.current) {
+        const { left, width } = containerRef.current.getBoundingClientRect();
+        let newPosition = ((e.touches[0].clientX - left) / width) * 100;
+        setSliderPosition(Math.max(0, Math.min(100, newPosition)));
+      }
+    },
+    [isDragging]
+  );
 
   useEffect(() => {
     if (isDragging) {
@@ -66,7 +50,7 @@ export default function BeforeAfterSlider({
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleMouseUp);
     };
-  }, [isDragging]);
+  }, [isDragging, handleMouseMove, handleTouchMove]);
 
   return (
     <div ref={containerRef} className={styles.container}>
