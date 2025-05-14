@@ -12,7 +12,7 @@
 /* Hero Section */
 .contactHero {
   position: relative;
-  background-image: url("../../assets/images/cover/grunpflege-cover-3.webp");
+  background-image: url("../../assets/images/cover/grunpflege-cover-1-desktop-contact-page.webp");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
@@ -669,7 +669,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../assets/images/cover/grunpflege-cover-4.webp");
+  background-image: url("../../assets/images/cover/grunpflege-cover-2-desktop-contact-page.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.1;

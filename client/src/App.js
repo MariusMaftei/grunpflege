@@ -1,9 +1,12 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout/RootLayout";
 import Home from "./pages/home";
 import "./styles/global.css";
-import GalleryPage from "./pages/gallery/gallery";
-import ContactPage from "./pages/contact/contact";
+import LoadingSpinner from "./components/UI/LoadingSpinner/LoadingSpinner";
+
+const GalleryPage = lazy(() => import("./pages/gallery/gallery"));
+const ContactPage = lazy(() => import("./pages/contact/contact"));
 
 const route = createBrowserRouter([
   {
@@ -16,11 +19,19 @@ const route = createBrowserRouter([
       },
       {
         path: "/gallery",
-        element: <GalleryPage />,
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <GalleryPage />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
-        element: <ContactPage />,
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <ContactPage />
+          </Suspense>
+        ),
       },
     ],
   },

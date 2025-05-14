@@ -8,7 +8,7 @@ import {
 import {
   faFacebookF,
   faInstagram,
-  faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { useTranslation } from "react-i18next";
@@ -49,7 +49,7 @@ export default function Footer() {
                 className={styles.socialLink}
                 aria-label="Twitter"
               >
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faXTwitter} />
               </a>
             </div>
           </div>

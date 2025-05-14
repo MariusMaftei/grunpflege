@@ -6,7 +6,6 @@ import styles from "./home.module.css";
 
 import BeforeAfterSlider from "../components/UI/BeforeAfterSlider/BeforeAfterSlider";
 import ServicesSection from "../components/sections/ServiceSection/ServiceSection";
-import InfiniteCarousel from "../components/UI/InfiniteCarousel/InfiniteCarousel";
 
 import RoundaboutBeforeImage from "../assets/images/gallery/before-after/roundabout-before.webp";
 import RoundaboutAfterImage from "../assets/images/gallery/before-after/roundabout-after.webp";
@@ -14,14 +13,47 @@ import GardenBeforeImage from "../assets/images/gallery/before-after/garden-befo
 import GardenAfterImage from "../assets/images/gallery/before-after/garden-after.webp";
 import GrassBeforeImage from "../assets/images/gallery/before-after/grass-before.webp";
 import GrassAfterImage from "../assets/images/gallery/before-after/grass-after.webp";
+import { getHomePageCarouselConfig } from "../data/gallery-data";
+import CarouselContainer from "../components/UI/InfiniteCarousel/carousel-container";
 
 export default function HomePage() {
   const { t } = useTranslation("home");
+
+  // Get carousel configuration for home page
+  const carouselRowsData = getHomePageCarouselConfig();
 
   // This ensures that the translations are loaded
   useEffect(() => {
     // This is just to trigger a re-render when the language changes
   }, [t]);
+
+  // iOS Safari parallax fix
+  useEffect(() => {
+    // Detect iOS
+    const isIOS =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    if (isIOS) {
+      // Get the elements with parallax backgrounds
+      const heroSection = document.querySelector(`.${styles.heroSection}`);
+      const showcaseSection = document.querySelector(
+        `.${styles.gardenShowcaseSection}`
+      );
+
+      // Apply iOS-specific styles
+      if (heroSection) {
+        heroSection.style.backgroundAttachment = "scroll";
+        // Optionally increase quality for iOS
+        heroSection.style.backgroundSize = "cover";
+      }
+
+      if (showcaseSection) {
+        showcaseSection.style.backgroundAttachment = "scroll";
+        // Optionally increase quality for iOS
+        showcaseSection.style.backgroundSize = "cover";
+      }
+    }
+  }, []);
 
   return (
     <div className={styles.pageContainer}>
@@ -111,7 +143,7 @@ export default function HomePage() {
                 {t("gallery.description")}
               </p>
             </div>
-            <InfiniteCarousel />
+            <CarouselContainer rowsData={carouselRowsData} />
           </div>
         </section>
 

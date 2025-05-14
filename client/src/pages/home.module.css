@@ -15,7 +15,7 @@
   padding: 10rem 1.5rem;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url("../assets/images/cover/grunpflege-cover-1-desktop.webp");
+    url("../assets/images/cover/grunpflege-cover-1-desktop-home-page.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -25,9 +25,6 @@
 @media (max-width: 992px) {
   .heroSection {
     padding: 8rem 1.5rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-      url("../assets/images/cover/grunpflege-cover-1-tablet.webp");
-    background-attachment: fixed; /* Keep fixed background for parallax effect */
   }
 }
 
@@ -35,9 +32,6 @@
 @media (max-width: 390px) {
   .heroSection {
     padding: 6rem 1.5rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-      url("../assets/images/cover/grunpflege-cover-1-mobile.webp");
-    background-attachment: fixed; /* Keep fixed background for parallax effect */
   }
 }
 
@@ -65,6 +59,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+  color: rgb(215, 222, 213);
 }
 
 .ctaButton {
@@ -221,7 +216,7 @@
   padding: 10rem 1.5rem;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../assets/images/cover/grunpflege-cover-2-desktop.webp");
+    url("../assets/images/cover/grunpflege-cover-2-desktop-home-page.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -232,9 +227,6 @@
 @media (max-width: 992px) {
   .gardenShowcaseSection {
     padding: 8rem 1.5rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-      url("../assets/images/cover/grunpflege-cover-2-tablet.webp");
-    background-attachment: fixed; /* Keep fixed background for parallax effect */
   }
 }
 
@@ -242,9 +234,6 @@
 @media (max-width: 390px) {
   .gardenShowcaseSection {
     padding: 6rem 1.5rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-      url("../assets/images/cover/grunpflege-cover-2-mobile.webp");
-    background-attachment: fixed; /* Keep fixed background for parallax effect */
   }
 }
 
@@ -362,5 +351,40 @@
 
   .testimonialGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* iOS-specific override using @supports query */
+@supports (-webkit-touch-callout: none) {
+  /* iOS-specific CSS */
+  .heroSection,
+  .gardenShowcaseSection {
+    background-attachment: scroll;
+    /* Optionally improve image quality for iOS */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Add this at the end of your CSS file */
+
+/* iOS-specific styles to fix blurry backgrounds */
+@supports (-webkit-touch-callout: none) {
+  /* iOS-specific CSS */
+  .heroSection,
+  .gardenShowcaseSection {
+    /* Disable parallax effect on iOS */
+    background-attachment: scroll;
+
+    /* Ensure high quality image rendering */
+    background-size: 100% auto;
+    background-position: center;
+
+    /* Improve image quality */
+    image-rendering: -webkit-optimize-contrast;
+
+    /* Ensure the image is sharp */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }

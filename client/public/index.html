@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#2e5d32" />
 
+    <!-- Performance Optimizations -->
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images7.alphacoders.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+
+    <!-- Preload critical hero image -->
+    <link
+      rel="preload"
+      href="/client/src/assets/images/cover/grunpflege-cover-1-desktop-home-page.webp"
+      as="image"
+      importance="high"
+    />
+
+    <!-- Preload secondary garden showcase image -->
+    <link
+      rel="preload"
+      href="/client/src/assets/images/cover/grunpflege-cover-2-desktop-home-page.webp"
+      as="image"
+    />
+
     <!-- Primary Meta Tags -->
     <title>
       Grünpflege - Professionelle Garten- und Landschaftsbaudienstleistungen
@@ -34,7 +60,10 @@
       property="og:description"
       content="Verwandeln Sie Ihren Außenbereich mit professionellen Garten- und Landschaftsbaudienstleistungen. Rasenpflege, Gartengestaltung und mehr."
     />
-    <meta property="og:image" content="https://grunpflege.com/og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://firebasestorage.googleapis.com/v0/b/grunpflege-de.firebasestorage.app/o/gallery%2Fcover%2Fwebsite-look.webp?alt=media&token=00fea9b9-bab9-4eb9-be30-fd443ff8c921"
+    />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:locale:alternate" content="en_US" />
 
@@ -51,7 +80,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://grunpflege.com/og-image.jpg"
+      content="https://firebasestorage.googleapis.com/v0/b/grunpflege-de.firebasestorage.app/o/gallery%2Fcover%2Fwebsite-look.webp?alt=media&token=00fea9b9-bab9-4eb9-be30-fd443ff8c921"
     />
 
     <!-- Alternate language versions -->
@@ -60,21 +89,31 @@
     <link rel="alternate" href="https://grunpflege.com/" hreflang="x-default" />
 
     <!-- Favicon and App Icons -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Preload critical fonts -->
+    <!-- Optimized font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload font CSS file -->
     <link
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
     />
+    <!-- Load fonts with display=swap to prevent render blocking -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
 
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
@@ -170,6 +209,89 @@
       gtag("js", new Date());
       gtag("config", "G-H10G0S636Z");
     </script>
+
+    <!-- Inline critical CSS for faster rendering -->
+    <style>
+      .heroSection {
+        position: relative;
+        color: #fff;
+        padding: 10rem 1.5rem;
+        text-align: center;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+          ),
+          url("https://firebasestorage.googleapis.com/v0/b/grunpflege-de.firebasestorage.app/o/gallery%2Fcover%2Fgrunpflege-cover-1-desktop-home-page.webp?alt=media&token=9aad47a9-624e-4da9-9d05-24795b68b04a");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        contain: layout paint;
+      }
+
+      .heroContent {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .heroTitle {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #fff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        line-height: 1.1;
+        font-family: "Playfair Display", serif;
+      }
+
+      .heroSubtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+        font-family: "Raleway", sans-serif;
+      }
+
+      .ctaButton {
+        background-color: #8bc34a;
+        color: #1a2e05;
+        border: none;
+        padding: 0.875rem 2rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        text-decoration: none;
+        font-family: "Raleway", sans-serif;
+      }
+
+      @media (max-width: 768px) {
+        .heroSection {
+          padding: 7rem 1.5rem;
+        }
+
+        .heroTitle {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .heroSection {
+          padding: 6rem 1.5rem;
+        }
+
+        .heroTitle {
+          font-size: 2rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript

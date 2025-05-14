@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../UI/LanguageSwitcher/LanguageSwitcher";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import CBCLogo from "../../../assets/images/logo/CBC-new-logo.png";
+import CBCLogo from "../../../assets/images/logo/CBC-logo.png";
 
 import styles from "./Header.module.css";
 

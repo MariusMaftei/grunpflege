@@ -1,20 +1,16 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { getCarouselRowImages } from "../../../data/gallery-data";
 import styles from "./InfiniteCarousel.module.css";
 
-export default function InfiniteCarousel() {
+// Single row carousel component that accepts props
+export default function InfiniteCarousel({
+  images,
+  duration = 40,
+  reverse = false,
+  rowId = "row",
+}) {
   const { t } = useTranslation("gallery");
-
-  // References to track animation pausing on hover
-  const row1Ref = useRef(null);
-  const row2Ref = useRef(null);
-  const row3Ref = useRef(null);
-
-  // Get images for each row from our data store
-  const row1Images = getCarouselRowImages("gardens");
-  const row2Images = getCarouselRowImages("lawns");
-  const row3Images = getCarouselRowImages("trees");
+  const rowRef = useRef(null);
 
   // Pause animation on hover
   useEffect(() => {
@@ -30,62 +26,24 @@ export default function InfiniteCarousel() {
       }
     };
 
-    const row1Element = row1Ref.current;
-    const row2Element = row2Ref.current;
-    const row3Element = row3Ref.current;
+    const rowElement = rowRef.current;
 
-    if (row1Element) {
-      row1Element.addEventListener("mouseenter", () =>
-        handleMouseEnter(row1Element)
+    if (rowElement) {
+      rowElement.addEventListener("mouseenter", () =>
+        handleMouseEnter(rowElement)
       );
-      row1Element.addEventListener("mouseleave", () =>
-        handleMouseLeave(row1Element)
-      );
-    }
-
-    if (row2Element) {
-      row2Element.addEventListener("mouseenter", () =>
-        handleMouseEnter(row2Element)
-      );
-      row2Element.addEventListener("mouseleave", () =>
-        handleMouseLeave(row2Element)
-      );
-    }
-
-    if (row3Element) {
-      row3Element.addEventListener("mouseenter", () =>
-        handleMouseEnter(row3Element)
-      );
-      row3Element.addEventListener("mouseleave", () =>
-        handleMouseLeave(row3Element)
+      rowElement.addEventListener("mouseleave", () =>
+        handleMouseLeave(rowElement)
       );
     }
 
     return () => {
-      if (row1Element) {
-        row1Element.removeEventListener("mouseenter", () =>
-          handleMouseEnter(row1Element)
+      if (rowElement) {
+        rowElement.removeEventListener("mouseenter", () =>
+          handleMouseEnter(rowElement)
         );
-        row1Element.removeEventListener("mouseleave", () =>
-          handleMouseLeave(row1Element)
-        );
-      }
-
-      if (row2Element) {
-        row2Element.removeEventListener("mouseenter", () =>
-          handleMouseEnter(row2Element)
-        );
-        row2Element.removeEventListener("mouseleave", () =>
-          handleMouseLeave(row2Element)
-        );
-      }
-
-      if (row3Element) {
-        row3Element.removeEventListener("mouseenter", () =>
-          handleMouseEnter(row3Element)
-        );
-        row3Element.removeEventListener("mouseleave", () =>
-          handleMouseLeave(row3Element)
+        rowElement.removeEventListener("mouseleave", () =>
+          handleMouseLeave(rowElement)
         );
       }
     };
@@ -97,74 +55,30 @@ export default function InfiniteCarousel() {
   };
 
   return (
-    <div className={styles.carouselContainer}>
-      <div className={styles.carouselRow} ref={row1Ref}>
-        <div
-          className={styles.carouselTrack}
-          style={{ animationDuration: "35s" }}
-        >
-          {duplicateImages(row1Images).map((image, index) => (
-            <div
-              key={`row1-${index}`}
-              className={`${styles.carouselItem} ${styles[image.format]}`}
-              style={{ width: `${image.width}px`, flexShrink: 0 }}
-            >
-              <img
-                src={image.src || "/placeholder.svg"}
-                alt={t(image.alt)}
-                loading="lazy"
-                className={styles.carouselImage}
-              />
-              <div className={styles.imageCaption}>{t(image.description)}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.carouselRow} ref={row2Ref}>
-        <div
-          className={styles.carouselTrack}
-          style={{ animationDuration: "45s", animationDirection: "reverse" }}
-        >
-          {duplicateImages(row2Images).map((image, index) => (
-            <div
-              key={`row2-${index}`}
-              className={`${styles.carouselItem} ${styles[image.format]}`}
-              style={{ width: `${image.width}px`, flexShrink: 0 }}
-            >
-              <img
-                src={image.src || "/placeholder.svg"}
-                alt={t(image.alt)}
-                loading="lazy"
-                className={styles.carouselImage}
-              />
-              <div className={styles.imageCaption}>{t(image.description)}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.carouselRow} ref={row3Ref}>
-        <div
-          className={styles.carouselTrack}
-          style={{ animationDuration: "40s" }}
-        >
-          {duplicateImages(row3Images).map((image, index) => (
-            <div
-              key={`row3-${index}`}
-              className={`${styles.carouselItem} ${styles[image.format]}`}
-              style={{ width: `${image.width}px`, flexShrink: 0 }}
-            >
-              <img
-                src={image.src || "/placeholder.svg"}
-                alt={t(image.alt)}
-                loading="lazy"
-                className={styles.carouselImage}
-              />
-              <div className={styles.imageCaption}>{t(image.description)}</div>
-            </div>
-          ))}
-        </div>
+    <div className={styles.carouselRow} ref={rowRef}>
+      <div
+        className={styles.carouselTrack}
+        style={{
+          animationDuration: `${duration}s`,
+          animationDirection: reverse ? "reverse" : "normal",
+        }}
+      >
+        {duplicateImages(images).map((image, index) => (
+          <div
+            key={`${rowId}-${index}`}
+            className={`${styles.carouselItem} ${styles[image.format]}`}
+            style={{ width: `${image.width}px`, flexShrink: 0 }}
+          >
+            <img
+              src={image.src || "/placeholder.svg"}
+              alt={t(image.alt)}
+              className={styles.carouselImage}
+              width={image.width}
+              height={280}
+            />
+            <div className={styles.imageCaption}>{t(image.description)}</div>
+          </div>
+        ))}
       </div>
     </div>
   );
